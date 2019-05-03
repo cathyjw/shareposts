@@ -7,13 +7,15 @@ It contains MVC structure.
  1. libraries folder
     * Core.php - Extract the controller, controller's method and parameters from URL. Then Loading the corresponding file in controllers folder.
     * Controller.php - Load model and view
-    * Database.php - PDO (PHP Data Objects): connect the database, create functions for query.
+    * Database.php - PDO (PHP Data Objects): connect the database, create functions (prepare, bind, excute, fetch result, count result) and return result.
  2. helpers folder
     * url_helper.php: redirect helper (such as redirect to login after register successful)
     * session_helper: Used to shows the message after operation. (such as register successful, post add...)
  3. config folder
     * config.php: database parameters
  4. model 
+    * Post.php - queries to add, edit, delete and search
+    * User.php - queries to let users register and login
  5. view (webpage show on browser)
     * inc - footer, header and navbar
     * pages - homepage and index
@@ -31,3 +33,6 @@ It bases on front-end application. The HTML, CSS and JavaScript can be added in 
  2. .htaccess file - Model rewrite module: When URL is shareports/public/undefined_position, it will go through shareports/public/index.php
 ### .htaccess file
 Direct "shareports/" to "shareports/public/"
+
+## Singleton and Factory
+
