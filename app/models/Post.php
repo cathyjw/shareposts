@@ -3,7 +3,7 @@
     private $db;
 
     public function __construct(){
-      $this->db = new Database;
+      $this->db = Database::instance();
     }
 
     public function getPosts(){

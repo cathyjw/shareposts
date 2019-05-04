@@ -11,12 +11,13 @@
     private $user = DB_USER;
     private $pass = DB_PASS;
     private $dbname = DB_NAME;
-
+    
+    private static $instance;
     private $dbh;
     private $stmt;
     private $error;
-
-    public function __construct(){
+    
+    private function __construct(){
       // Set DSN
       $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbname;
       $options = array(
@@ -31,6 +32,15 @@
         $this->error = $e->getMessage();
         echo $this->error;
       }
+    }
+    
+    public static function instance()
+    {
+        if (self::$instance === null)
+        {
+            self::$instance = new self;
+        }
+        return self::$instance;
     }
 
     // Prepare statement with query
