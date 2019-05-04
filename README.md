@@ -15,6 +15,7 @@ Environment
 * Click Config button after Apache and open httpd.conf
 * Change DocumentRoot to the folder which will save the code of website
 * Change Directory to the same folder with DocumentRoot
+* Restart Apache in XAMPP
 
 ### Clone shareposts
 * git clone shareposts (git clone https://github.com/cathyjw/shareposts.git) to DocumentRoot folder
