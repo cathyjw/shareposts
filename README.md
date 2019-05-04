@@ -1,5 +1,23 @@
 # Shareposts
 It is based on the PHP and MVC project, shareposts, creating by Brad Traversy.
+## Installation
+Environment 
+* PHP 7.3.4
+* MySQL 8.0.16
+
+### Install XAMPP
+Download XAMPP for Windows at https://www.apachefriends.org/index.html and install following the struction.
+Run XAMPP by administrator
+Click service installation of Apache and MySQL
+Click start of Apache and MySQL
+### Modify apache of XAMPP
+Click Config button after Apache and open httpd.conf
+Change DocumentRoot to the folder of the website
+Change Directory to the same folder with DocumentRoot
+### Clone shareposts
+git clone shareposts to DocumentRoot folder
+### Run the website
+http://localhost
 ## Explanation
 Explain each part(folder or file) in the structure
 ### app folder
