@@ -19,6 +19,8 @@ Environment
 
 ### Clone shareposts
 * git clone shareposts (git clone https://github.com/cathyjw/shareposts.git) to DocumentRoot folder
+* nuproject folder is NetBean IDE's folder. It is not necessary. Delete it.
+
 ### Database Setup
 * Go into http://localhost/phpmyadmin
 * Create Database "shareposts" (collation)
@@ -29,6 +31,8 @@ Environment
 http://localhost
 ## Explanation
 Explain each part(folder or file) in the structure
+### nbproject folder
+It is NetBean IDE's folder. It is not necessary part of this structure. 
 ### app folder
 It contains MVC structure.
  1. libraries folder
