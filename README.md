@@ -35,4 +35,4 @@ It bases on front-end application. The HTML, CSS and JavaScript can be added in 
 Direct "shareports/" to "shareports/public/"
 
 ## Singleton and Factory
-
+I just find the original structure did not contain singleton. I modify shareposts/app/libraries/database.php. I think it used singleton now. I also think the original shareports/app/libraries/controller.php used factory. I still work on that. I will upload if I have new finding.
