@@ -6,16 +6,24 @@ Environment
 * MySQL 8.0.16
 
 ### Install XAMPP
-Download XAMPP for Windows at https://www.apachefriends.org/index.html and install following the struction.
-Run XAMPP by administrator
-Click service installation of Apache and MySQL
-Click start of Apache and MySQL
+* Download XAMPP for Windows at https://www.apachefriends.org/index.html and install following the instruction.
+* Run XAMPP by administrator
+* Click service installation of Apache and MySQL
+* Click start of Apache and MySQL
+
 ### Modify apache of XAMPP
-Click Config button after Apache and open httpd.conf
-Change DocumentRoot to the folder of the website
-Change Directory to the same folder with DocumentRoot
+* Click Config button after Apache and open httpd.conf
+* Change DocumentRoot to the folder which will save the code of website
+* Change Directory to the same folder with DocumentRoot
+
 ### Clone shareposts
-git clone shareposts to DocumentRoot folder
+* git clone shareposts (git clone https://github.com/cathyjw/shareposts.git) to DocumentRoot folder
+### Database Setup
+* Go into http://localhost/phpmyadmin
+* Create Database "shareposts" (collation)
+* Open SQL: Enter queries in shareposts.sql
+* Press Go
+
 ### Run the website
 http://localhost
 ## Explanation
