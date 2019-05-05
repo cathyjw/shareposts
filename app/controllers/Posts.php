@@ -46,6 +46,8 @@
           // Validated
           if($this->postModel->addPost($data)){
             flash('post_message', 'Post Added');
+            //JieWang:2019-05-05; add post and redirect in the controller
+            //echo 'controller->add'.json_encode($data);
             redirect('posts');
           } else {
             die('Something went wrong');

@@ -2,6 +2,7 @@
   // DB Params
   define('DB_HOST', 'localhost');
   define('DB_USER', 'root');
+//  encrypt with key and then decrypt when use it.
   define('DB_PASS', '123456');
   define('DB_NAME', 'shareposts');
 
