@@ -1,12 +1,7 @@
 <?php
   require_once '../app/services/UserService.php';
+  
   class User {
-    private $db;
-    
-
-    public function __construct(){
-      $this->db = Database::instance();
-    }
 
     // Regsiter user
     public function register($data){

@@ -1,16 +1,10 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+    interface IPostService {
 
-/**
- * Description of IPostService
- *
- * @author Jie
- */
-class IPostService {
-    //put your code here
-}
+        public function GetPosts();
+        public function AddPost($data);
+        public function UpdatePost($data);
+        public function GetPostById($id);
+        public function DeletePost($id);
+    }
