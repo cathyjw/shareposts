@@ -13,5 +13,8 @@
  */
 
 interface IUserDAL {
-    public function AddUser($data); 
+    public function AddUser();
+    public function Login();
+    public function FindUserByEmail();
+    public function GetUserById();
 }

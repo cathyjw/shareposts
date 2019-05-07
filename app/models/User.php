@@ -1,6 +1,8 @@
 <?php
+  require_once '../app/services/UserService.php';
   class User {
     private $db;
+    
 
     public function __construct(){
       $this->db = Database::instance();
@@ -8,50 +10,37 @@
 
     // Regsiter user
     public function register($data){
-        require_once '../app/services/UserService.php';
-        $result = call_user_func(array('UserService', 'AddUser'), $data);
-        return result;
+        return call_user_func_array(array('UserService', 'AddUser'), array($data));
+        
     }
 
     // Login User
     public function login($email, $password){
-      $this->db->query('SELECT * FROM users WHERE email = :email');
-      $this->db->bind(':email', $email);
-
-      $row = $this->db->single();
-
-      $hashed_password = $row->password;
-      if(password_verify($password, $hashed_password)){
-        return $row;
-      } else {
-        return false;
-      }
+        
+        return call_user_func_array(array('UserService', 'Login'), array($email, $password));
     }
 
     // Find user by email
     public function findUserByEmail($email){
-      $this->db->query('SELECT * FROM users WHERE email = :email');
-      // Bind value
-      $this->db->bind(':email', $email);
-
-      $row = $this->db->single();
-
-      // Check row
-      if($this->db->rowCount() > 0){
-        return true;
-      } else {
-        return false;
-      }
+        
+        return call_user_func_array(array('UserService', 'FindUserByEmail'), array($email));
+        
     }
 
     // Get User by ID
     public function getUserById($id){
-      $this->db->query('SELECT * FROM users WHERE id = :id');
-      // Bind value
-      $this->db->bind(':id', $id);
-
-      $row = $this->db->single();
-
-      return $row;
+       
+        return call_user_func_array(array('UserService', 'GetUserById'), array($id));
+        
+//      $result = call_user_func(array('UserService', 'GetUserById'), array($id));
+//      return $result;
+      
+//        $this->db->query('SELECT * FROM users WHERE id = :id');
+//      // Bind value
+//        $this->db->bind(':id', $id);
+//
+//      $row = $this->db->single();
+//
+//      return $row;
     }
   }

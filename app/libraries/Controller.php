@@ -10,6 +10,7 @@
       require_once '../app/models/' . $model . '.php';
 
       // Instatiate model
+      
       return new $model();
     }
 
