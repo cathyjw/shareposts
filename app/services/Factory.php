@@ -1,8 +1,9 @@
 <?php
 
-//    require_once '../app/DAL/UserDAL.php';
-    require_once 'D:/BobydoInc/Website/website_shareposts/shareposts/app/DAL/UserDAL.php';
-    require_once 'D:/BobydoInc/Website/website_shareposts/shareposts/app/DAL/PostDAL.php';
+//    require_once '../DAL/UserDAL.php';
+//    CathyWang? cannot use '../DAL/UserDAL.php'
+    require_once 'D:/BobydoInc/Website/websiteShareposts/shareposts/app/DAL/UserDAL.php';
+    require_once 'D:/BobydoInc/Website/websiteShareposts/shareposts/app/DAL/PostDAL.php';
 
     class Factory {
         public static function AddUser($data) {        

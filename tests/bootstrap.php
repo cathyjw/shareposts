@@ -13,3 +13,5 @@
 //ini_set('include_path', ini_get('include_path'));
 
 // put your code here
+require_once 'D:/Program/XAMPP/php/composer/vendor/autoload.php';
+require_once 'D:/BobydoInc/Website/websiteShareposts/shareposts/app/bootstrap.php';
