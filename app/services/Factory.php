@@ -1,7 +1,8 @@
 <?php
 
-    require_once '../app/DAL/UserDAL.php';
-    require_once '../app/DAL/PostDAL.php';
+//    require_once '../app/DAL/UserDAL.php';
+    require_once 'D:/BobydoInc/Website/website_shareposts/shareposts/app/DAL/UserDAL.php';
+    require_once 'D:/BobydoInc/Website/website_shareposts/shareposts/app/DAL/PostDAL.php';
 
     class Factory {
         public static function AddUser($data) {        
