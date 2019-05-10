@@ -54,7 +54,7 @@
             $data['confirm_password_err'] = 'Passwords do not match';
           }
         }
-
+        
         // Make sure errors are empty
         if(empty($data['email_err']) && empty($data['name_err']) && empty($data['password_err']) && empty($data['confirm_password_err'])){
           // Validated
@@ -63,6 +63,8 @@
           $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
 
           // Register User
+//        CathyWang 2019-05-10
+//        $this->userModel = $this->service->AddUser($data);
           if($this->userModel->register($data)){
             flash('register_success', 'You are registered and can log in');
             redirect('users/login');
@@ -73,6 +75,10 @@
         } else {
           // Load view with errors
           $this->view('users/register', $data);
+//          CathyWang 2019-05-10
+//          if($this->userModel==null)
+//              sorry,we could not register you.
+//          $this->view('users/register', $this->userModel);
         }
 
       } else {
@@ -95,6 +101,9 @@
 
     public function login(){
       // Check for POST
+      try {
+      //CathyWang 2019-05-10 
+      //throw new Exception('Division by zero.');
       if($_SERVER['REQUEST_METHOD'] == 'POST'){
         // Process form
         // Sanitize POST data
@@ -158,6 +167,11 @@
         // Load view
         $this->view('users/login', $data);
       }
+    } catch (Exception $e) {
+    //CathyWang 2019-05-10 try catch and add log
+    echo 'sorry our service is down, please try it later\n';
+    }
+
     }
 
     public function createUserSession($user){
