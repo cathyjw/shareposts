@@ -1,7 +1,7 @@
 <?php
-  require_once '../app/services/UserService.php';
+  require_once APPROOT . '/services/UserService.php';
   
-  class User {
+  class User{
 
     // Regsiter user
     public function register($data){
